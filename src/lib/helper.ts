@@ -1,27 +1,41 @@
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export const clsxm = (...args: any[]) => {
-  return twMerge(clsx(args))
-}
+  return twMerge(clsx(args));
+};
 
 export const escapeHTMLTag = (html: string) => {
   const lt = /</g,
     gt = />/g,
     ap = /'/g,
-    ic = /"/g
+    ic = /"/g;
   return html
     .toString()
-    .replace(lt, '&lt;')
-    .replace(gt, '&gt;')
-    .replace(ap, '&#39;')
-    .replace(ic, '&#34;')
-}
+    .replace(lt, "&lt;")
+    .replace(gt, "&gt;")
+    .replace(ap, "&#39;")
+    .replace(ic, "&#34;");
+};
 
 export const safeJsonParse = (str: string) => {
   try {
-    return JSON.parse(str)
+    return JSON.parse(str);
   } catch (e) {
-    return null
+    return null;
   }
-}
+};
+
+export const isShallowEqualArray = <T>(arr1: T[], arr2: T[]): boolean => {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (!Object.is(arr1[i], arr2[i])) {
+      return false;
+    }
+  }
+
+  return true;
+};
