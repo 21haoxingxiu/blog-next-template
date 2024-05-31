@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { clsxm } from '~/lib/helper'
 
 export type LoadingProps = {
   loadingText?: string
@@ -20,7 +19,7 @@ export const Loading: Component<LoadingProps> = ({
   return (
     <div
       data-hide-print
-      className={clsxm('my-20 flex flex-col center', className)}
+      className={'my-20 flex flex-col center'}
     >
       <span className="loading loading-ball loading-lg" />
       {!!nextLoadingText && (

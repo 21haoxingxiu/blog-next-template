@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className} style={{
+        maxWidth: '1200',
+        margin: '0 auto',
+        padding: '0 1rem',
+      }}>{children}</body>
     </html>
   );
 }
