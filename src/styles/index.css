@@ -2,39 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-animation-light: #303030;
+  --color-animation-dark: #fdfdfd;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --color-animation-during-light: #e3d9d9;
+  --color-animation-during-dark: #eee;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html.light {
+  --color-animation: var(--color-animation-light);
+  --color-animation-during: var(--color-animation-during-light);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+html.dark {
+  --color-animation: var(--color-animation-dark);
+  --color-animation-during: var(--color-animation-during-dark);
 }
 
+/* Custom dark mode styles */
+html.dark {
+  background-color: var(--color-animation-light);
+  color: var(--color-animation-dark);
+}
+
+html.light {
+  background-color: var(--color-animation-dark);
+  color: var(--color-animation-light);
+}
 
 /* signature animation */
-
 #signaturePath {
   stroke-dasharray: 30000;
   stroke-dashoffset: 30000;
   fill: transparent;
-  animation: drawSignature 8s linear infinite;
+  animation: drawSignature 10s linear infinite;
 }
 
 @keyframes drawSignature {
@@ -44,14 +46,14 @@ body {
   }
 
   35% {
-    fill: #e3d9d9;
+    fill: var(--color-animation-during);
   }
 
 
-  55%,
+  45%,
   85% {
     stroke-dashoffset: 0;
-    fill: #303030;
+    fill: var(--color-animation);
   }
 
   90%,

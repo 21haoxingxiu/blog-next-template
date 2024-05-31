@@ -1,9 +1,11 @@
+import ThemeToggle from "~/components/ui/ThemeSwitcher";
+
 export default function RightBar() {
   return (
-    <div className=" space-x-2">
-      <span>博客</span>
+    <div className="flex items-center  space-x-6">
+      <span>blog</span>
       <span>project</span>
-      <span>主题</span>
+      <ThemeToggle />
     </div>
   )
 }

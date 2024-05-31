@@ -1,7 +1,13 @@
+'use client';
+
+import { useTheme } from 'next-themes';
+
 export default function Signature() {
-  return <svg width="252" height="60" viewBox="0 0 820 200" xmlns="http://www.w3.org/2000/svg">
+  const { theme } = useTheme();
+
+  return <svg className=" cursor-pointer" width="180" height="60" viewBox="0 0 820 200" xmlns="http://www.w3.org/2000/svg">
     <g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)">
-      <path id='signaturePath' stroke="#303030" strokeWidth="2"
+      <path id='signaturePath' stroke={theme === 'dark' ? "#fff" : '#303030'} strokeWidth="2"
         d="M5198 1492 c-85 -96 -185 -305 -262 -553 -31 -101 -43 -124 -82 -168
 -26 -29 -50 -51 -54 -49 -4 2 -23 23 -42 48 l-34 46 46 41 c56 50 80 96 80
 151 0 102 -125 136 -205 56 -37 -36 -62 -80 -95 -163 -27 -68 -7 -75 26 -9 45
