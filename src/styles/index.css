@@ -26,3 +26,37 @@ body {
     text-wrap: balance;
   }
 }
+
+
+/* signature animation */
+
+#signaturePath {
+  stroke-dasharray: 30000;
+  stroke-dashoffset: 30000;
+  fill: transparent;
+  animation: drawSignature 8s linear infinite;
+}
+
+@keyframes drawSignature {
+  0% {
+    stroke-dashoffset: 30000;
+    fill: transparent;
+  }
+
+  35% {
+    fill: #e3d9d9;
+  }
+
+
+  55%,
+  85% {
+    stroke-dashoffset: 0;
+    fill: #303030;
+  }
+
+  90%,
+  100% {
+    stroke-dashoffset: 30000;
+    fill: transparent;
+  }
+}
