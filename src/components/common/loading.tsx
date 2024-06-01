@@ -12,7 +12,6 @@ export const Loading: Component<LoadingProps> = ({
   className,
   useDefaultLoadingText = false,
 }) => {
-  console.log('loading');
   const nextLoadingText = useDefaultLoadingText
     ? defaultLoadingText
     : loadingText

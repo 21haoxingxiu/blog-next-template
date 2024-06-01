@@ -2,7 +2,7 @@
 export const NotFound404 = () => {
   return (
     <div className="min-h-[500px]">
-      <div className=" w-52">
+      <div className="center flex-col">
         <$404SVG className="size-[400px]" />
         <p>这颗星球还没有知识哦，去其他地方探索吧</p>
       </div>

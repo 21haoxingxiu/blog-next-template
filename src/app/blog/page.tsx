@@ -1,8 +1,8 @@
 
-export default function Home() {
+export default function Blog() {
   return (
     <div className=" text-center">
-      home
+      blog
     </div>
   );
 }

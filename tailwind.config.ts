@@ -23,6 +23,7 @@ const config: Config = {
 function addShortcutPlugin({ addUtilities }: PluginAPI) {
   const styles: CSSRuleObject = {
     ".center": {
+      "display": "flex",
       "align-items": "center",
       "justify-content": "center",
     },
