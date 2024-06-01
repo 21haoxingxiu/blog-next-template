@@ -55,7 +55,7 @@ const Loading = () => {
   useChain([gridApi, boxApi], [0, 1], 1500)
 
   return (
-    <div className='container  bg-blue-400 text-white'>
+    <div className='container'>
       <svg viewBox={`0 0 ${MAX_WIDTH} ${MAX_HEIGHT}`}>
         <g>
           {gridSprings.map(({ x2 }, index) => (

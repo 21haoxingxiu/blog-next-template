@@ -5,7 +5,6 @@ export default function Project() {
   return (
     <div className=" text-center">
       Project
-      <Loading />
     </div>
   );
 }
