@@ -1,3 +1,3 @@
-import { FullPageLoading } from '~/components/common/loading'
+import Loading from '~/components/common/loading'
 
-export default FullPageLoading
+export default Loading
