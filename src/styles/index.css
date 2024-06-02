@@ -6,8 +6,8 @@
   --color-animation-light: #303030;
   --color-animation-dark: #fdfdfd;
 
-  --color-animation-during-light: #e3d9d9;
-  --color-animation-during-dark: #eee;
+  --color-animation-during-light: #ccc;
+  --color-animation-during-dark: #ccc;
 }
 
 html.light {

@@ -5,8 +5,8 @@ import { useTheme } from 'next-themes';
 export default function Signature() {
   const { theme } = useTheme();
 
-  return <svg className=" cursor-pointer" width="180" height="60" viewBox="0 0 820 200" xmlns="http://www.w3.org/2000/svg">
-    <g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)">
+  return <svg className=" cursor-pointer" width="160" viewBox="0 0 820 200" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(-180,250) scale(0.15,-0.15)">
       <path id='signaturePath' stroke={theme === 'dark' ? "#fff" : '#303030'} strokeWidth="2"
         d="M5198 1492 c-85 -96 -185 -305 -262 -553 -31 -101 -43 -124 -82 -168
 -26 -29 -50 -51 -54 -49 -4 2 -23 23 -42 48 l-34 46 46 41 c56 50 80 96 80
