@@ -5,6 +5,8 @@ import Transitions from "~/components/layout/Transitions";
 
 import "../styles/index.css";
 import Header from "~/components/layout/header";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { QueryProvider } from "~/providers/queryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +29,11 @@ export default function RootLayout({
       }}>
         <ThemeProvider attribute="class">
           <Header />
-          <Transitions> {children} </Transitions>
+          <QueryProvider>
+            <Transitions>
+              <div className="mt-12 p-4">{children}</div>
+            </Transitions>
+          </QueryProvider>
         </ThemeProvider>
       </body>
     </html>
