@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className} style={{
         maxWidth: '1000px',
         margin: '0 auto',
-        padding: '0 1rem',
+        padding: '1rem',
       }}>
         <ThemeProvider attribute="class">
           <Header />
