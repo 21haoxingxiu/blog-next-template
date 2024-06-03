@@ -1,0 +1,48 @@
+
+
+.page-transition-enter {
+  opacity: 0;
+}
+.page-transition-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.page-transition-exit {
+  opacity: 1;
+}
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+/* signature animation */
+#signaturePath {
+  stroke-dasharray: 30000;
+  stroke-dashoffset: 30000;
+  fill: transparent;
+  animation: drawSignature 10s linear infinite;
+}
+
+@keyframes drawSignature {
+  0% {
+    stroke-dashoffset: 30000;
+    fill: transparent;
+  }
+
+  35% {
+    fill: var(--color-animation-during);
+  }
+
+
+  45%,
+  85% {
+    stroke-dashoffset: 0;
+    fill: var(--color-animation);
+  }
+
+  90%,
+  100% {
+    stroke-dashoffset: 30000;
+    fill: transparent;
+  }
+}

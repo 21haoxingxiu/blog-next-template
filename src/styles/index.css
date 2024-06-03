@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url(./reset.css);
+@import url(./animation.css);
 
 :root {
   --color-animation-light: #303030;
@@ -33,34 +34,3 @@ html.light {
   color: var(--color-animation-light);
 }
 
-/* signature animation */
-#signaturePath {
-  stroke-dasharray: 30000;
-  stroke-dashoffset: 30000;
-  fill: transparent;
-  animation: drawSignature 10s linear infinite;
-}
-
-@keyframes drawSignature {
-  0% {
-    stroke-dashoffset: 30000;
-    fill: transparent;
-  }
-
-  35% {
-    fill: var(--color-animation-during);
-  }
-
-
-  45%,
-  85% {
-    stroke-dashoffset: 0;
-    fill: var(--color-animation);
-  }
-
-  90%,
-  100% {
-    stroke-dashoffset: 30000;
-    fill: transparent;
-  }
-}
