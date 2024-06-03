@@ -15,7 +15,6 @@ export default function Blog() {
     queryKey: ['blogList'],
     queryFn: getData
   });
-  console.log("🤖==> ~ data:", data)
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error fetching data</div>;
@@ -23,9 +22,9 @@ export default function Blog() {
   return (
     <ul>
       {data?.map(post => (
-        <li key={post.id}>
+        <li key={post.id} className=' p-6 mb-6 border card-shadow cursor-pointer'>
           <h3> {post.title} </h3>
-          <div>
+          <div className='flex justify-between'>
             <p>{post.content}</p>
             {post.imagePath && <Image src={post.imagePath} alt="img" width={50} height={50} />}
           </div>

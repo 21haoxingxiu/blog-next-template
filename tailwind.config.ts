@@ -23,9 +23,13 @@ const config: Config = {
 function addShortcutPlugin({ addUtilities }: PluginAPI) {
   const styles: CSSRuleObject = {
     ".center": {
-      "display": "flex",
+      display: "flex",
       "align-items": "center",
       "justify-content": "center",
+    },
+    ".border": {
+      border: "1px solid #eee",
+      "border-radius": "5px",
     },
     ".card-shadow": {
       "box-shadow": "0 0 0 1px rgba(0,0,0,.08),0 4px 6px rgba(0,0,0,.04)",

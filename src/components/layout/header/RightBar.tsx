@@ -5,7 +5,6 @@ export default function RightBar() {
   return (
     <div className="flex items-center  space-x-6">
       <Link href="/blog">blog</Link>
-      <Link href="/project">project</Link>
       <ThemeToggle />
     </div>
   )
